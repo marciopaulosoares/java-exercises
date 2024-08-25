@@ -2,6 +2,7 @@ package lambdas;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -22,6 +23,7 @@ public class FI_from_API {
         examples.consumer();
         examples.function();
         examples.unaryBinaryOperator();
+        examples.methodReference();
     }
 
     public void predicate() {
@@ -95,5 +97,11 @@ public class FI_from_API {
         BinaryOperator<String> binaryOp = (s1, s2) -> s1.concat(s2);
         System.out.println("Binary operator" + binaryOp.apply("Marcio ", "Paulo"));
 
+    }
+
+    public void methodReference() {
+        List<String> names = Arrays.asList("Marcio", "Danilo", "Alex");
+        names.forEach(name -> System.out.println(name)); //lambda
+        names.forEach(System.out::println); // method reference
     }
 }
