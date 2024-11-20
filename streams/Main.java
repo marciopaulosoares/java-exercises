@@ -38,7 +38,19 @@ public class Main {
         if(mostValuable != null){
             System.out.println("Most Valuable: " + mostValuable.getName());
         }
+
+        thepipeline(listOfProduct);
         
-        
+    }
+
+    private static long thepipeline(List<Product> products){
+        return products
+                .stream() // create the stream
+                .peek(System.out::println)
+                .filter( product -> product.getPrice() > 1680) // filter it
+                .peek(System.out::println) // show the value Computer 12000.0
+                .count(); // 1
+
+
     }
 }
