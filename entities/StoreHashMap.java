@@ -1,4 +1,4 @@
-package learncollections;
+package entities;
 import java.util.HashMap;
 public class StoreHashMap {
     public static void main(String[] args) {
