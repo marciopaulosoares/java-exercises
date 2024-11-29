@@ -23,5 +23,9 @@ public class PrimitiveStreams {
         LongStream lStream2 = LongStream.of(4L, 5L);
 
         System.out.println(intStream2.count() + "," + dStream2.count() + "," + lStream2.count());
+
+        //using sum method
+        IntStream intStream3 = IntStream.of(4, 5);
+        System.out.println(intStream3.sum());
     }
 }
