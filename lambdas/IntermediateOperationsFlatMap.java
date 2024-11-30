@@ -21,7 +21,7 @@ public class IntermediateOperationsFlatMap {
        Stream<List<String>> streamOfLists = Stream.of(list1, list2);
 
        String result = streamOfLists.flatMap(Collection::stream).collect(Collectors.joining(", "));
-       System.out.println(result);
+       System.out.println(result); //blue, yellow, red, cicle, squad, triangle
 
     }
 }
