@@ -26,7 +26,7 @@ jar --create --verbose --file myJar.jar .
 jar -cvf myJar.jar -C /myapplication 
 ~~~
 -------------
-## Exemple
+## Examples
 ~~~
 javac model/DogModel.java test001/my001class.java
 javac model/*.java test001/*.java
@@ -35,4 +35,21 @@ java -cp classes compileandrun.test001.my001class
 java -classpath classes compileandrun.test001.my001class
 java --class-path classes compileandrun.test001.my001class
 ~~~
+## cd to classes and generate an jar
+~~~
+jar -cvf my001.jar .
+jar -cvf my001.jar -C ./classes/compileandrun
 <classpath> option can be used with javac command
+~~~
+
+## Create a jar file with a manifest file run in the classes directory
+~~~
+jar cfm my001.jar ../MANIFEST.MF .
+~~~
+
+## Manifest template
+~~~
+Manifest-Version: 1.0
+Created-By: Marcio Paulo
+Main-Class: compileandrun.test001.my001class
+~~~
